@@ -26,8 +26,7 @@ y le colocamos un blanco para que resalte en el gris del fondo
 Agregamos border-radius para redonder las esquinas*/
 
         .ig-post {
-            width: 400px
-            ;
+            width: 400px;
             background:#fff;
             border: 1px solid #dbdbdb;
             border-radius: 10px;
@@ -37,8 +36,21 @@ Agregamos border-radius para redonder las esquinas*/
 
         .post-header {
             display: flex;
-            align-items: center;
             padding: 10px;
+            justify-content: space-between;
+        }
+
+        .post-header-left {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .post-header-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 10px;
         }
 
 /*el border radius del avatar al 50% nos hace un circulo perfecto,
@@ -70,11 +82,23 @@ para ajustar el tamano de los iconos*/
 
         .post-actions {
             display: flex;
+            justify-content: space-between;
             gap: 10px;
             padding: 10px 10px;
             font-size: 15px;
         }
 
+        .post-actions-left {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .post-actions-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
 /*Este es el caption ques es 'concentrado'*/
 
         .post-caption {
@@ -104,22 +128,33 @@ espero haber explicado bien.*/
 <!--Utilice el primer div como header donde pondria la foto de perfil y el nombre de usuario, en este caso, leomessi-->
     <div class="ig-post">
         <div class="post-header">
+            <div class="post-header-left">
 <!--Busque en google una foto que me gustara de el, sencillamente le di click derecho, abrir imagen en una nueva pestana y copie el enlace aca-->
-            <img src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds"  class="avatar">
-            <span> <class="username"> leomessi </span>
+                <img src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds"  class="avatar">
+                <span> <class="username"> leomessi </span>
+            </div>
+            <div class="post-header-right">
+                <i class="fa-solid fa-ellipsis-vertical menu-icon"></i>
+            </div>
         </div>
+
 <!--Mismo proceso de la imagen anterior-->
 <!--En este bloque ira solo la imagen asi que no vi una necesidad de crear un div solo para ella, pense que podia complicarme la vida despues-->
         <img src="https://fifpro.org/media/5chb3dva/lionel-messi_imago1019567000h.jpg?rxy=0.32986930611281567,0.18704579979466449&rnd=133378758718600000"  class="post-img">
 
         <div class="post-actions">
 <!--Utilice fontawesome para poner los iconos de mi post, fue algo nuevo y me parecio recontra util-->
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-regular fa-comment"></i>
-            <i class="fa-regular fa-paper-plane"></i>
+            <div class="actions-left">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+            <div class="actions-right">
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
         </div>
 <!--utlizamos la etiqueta span para poder editar ambos textos por separado
-ya que en instagra, el nombre de usuario se muestra en negrita y el caption no.-->
+ya que en instagram, el nombre de usuario se muestra en negrita y el caption no.-->
         <div class="post-caption">
             <span class="username">leomessi</span>
             <span class="caption-text">Concentrado.</span>
